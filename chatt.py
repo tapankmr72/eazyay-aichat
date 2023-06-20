@@ -1,3 +1,4 @@
+import streamlit as st
 import urllib.request
 import time
 from dotenv import load_dotenv
@@ -7,9 +8,8 @@ import urllib.request
 import requests
 import openai
 import openpyxl
-config = dotenv_values('.env')
-openai.api_key = config['OPENAI_API_KEY']
-os.environ['OPENAI_API_KEY'] = config['OPENAI_API_KEY']
+
+openai.api_key = st.secrets['OPENAI_API_KEY']
 
 path = ""
 user = path + "converse.xlsx"
