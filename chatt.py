@@ -1,7 +1,7 @@
 import streamlit as st
 import urllib.request
 import time
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 from datetime import datetime,timedelta
 import json
 import urllib.request
