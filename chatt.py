@@ -81,7 +81,7 @@ while looper==0:
         userfile.write(numbertext+","+datetext+"\n")
         userfile.close()
 
-       response1 = openai.ChatCompletion.create(model="gpt-3.5-turbo-0613",
+       response1 = openai.ChatCompletion.create(model="gpt-3.5-0613",
                                                messages=[{"role": "system", "content": system_msg},
                                                          {"role": "user", "content": messagetext}])
        message1 = (response1["choices"][0]["message"]["content"])
