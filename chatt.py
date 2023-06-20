@@ -6,8 +6,10 @@ import urllib.request
 import requests
 import openai
 import openpyxl
+config = dotenv_values('.env')
+openai.api_key = config['OPENAI_API_KEY']
+os.environ['OPENAI_API_KEY'] = config['OPENAI_API_KEY']
 
-openai.api_key = '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'
 path = ""
 user = path + "converse.xlsx"
 wb_obj = openpyxl.load_workbook(user)
